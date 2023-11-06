@@ -1,0 +1,10 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+	<head></head>
+    <body>
+        <h1>Hallo på do, ${deltager}</h1>
+        <p> Du er nå registrert med følgende info:
+        	${p}
+        </p>
+    </body>
+</html>

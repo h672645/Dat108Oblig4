@@ -1,0 +1,38 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charsert="UTF-8">
+<title>hilsen</title>
+</head>
+<body>
+	<h1>Hallo på do, ${deltager}</h1>
+	<p>Du er nå registrert med følgende info: 
+	${p.fornavn}
+	</p>
+	<form:form action="registrer" method="post" modelAttribute="deltager">
+		<form:label path="fornavn">fornavn</form:label>
+		<form:input path="fornavn"/><br>
+		<form:label path="etternavn">etternavn</form:label>
+		<form:input path="etternavn"/><br>
+		<form:label path="mobil">mobil</form:label>
+		<form:input path="mobil"/><br>
+		<form:label path="passord">passord</form:label>
+		<form:input path="passord"/><br>
+		<form:label path="kjonn">kjonn</form:label>
+		<form:input path="kjonn"/><br>
+		<input type="submit" value="Lagre"/>
+	</form:form>
+</body>
+</html>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%-- Linjen over må alltid være med som første linje i filen --%>
+<html>
+<body>
+	<%-- ${person} i linjen under er et uttrykk som henter attributten 
+	     "person" fra modellen (den vi la til med model.setAttribute()) --%>
+	<h1>Hallo på do, ${person}</h1>
+</body>
+</html>

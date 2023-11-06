@@ -1,0 +1,37 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>hilsen</title>
+</head>
+<body>
+	<h1>Hallo på do, ${deltager}</h1>
+	<p>Du er nå registrert med følgende info: 
+	${p.fornavn}
+	</p>
+	<form:form action="registrer" method="post" modelAttribute="deltager">
+		<form:label path="fornavn">fornavn</form:label>
+		<form:input path="fornavn"/><br>
+		<form:label path="etternavn">etternavn</form:label>
+		<form:input path="etternavn"/><br>
+		<form:label path="mobil">mobil</form:label>
+		<form:input path="mobil"/><br>
+		<form:label path="passord">passord</form:label>
+		<form:input path="passord"/><br>
+		<form:label path="kjonn">kjonn</form:label>
+		<form:input path="kjonn"/><br>
+		<input type="submit" value="Lagre"/>
+	</form:form>
+	<form id ="deltager" action="lagrePerson" method="post">
+		<label for="fornavn">Fornavn</label>
+		<input id="fornavn" name="fornavn" type="text" value=""/><br>
+		<label for="etternavn">Etternavn</label>
+		<input id="etternavn" name="etternavn" type="text" value=""/><br>
+		<label for="mobil">Mobil</label>
+		<input id="mobil" name="mobil" type="text" value=""/><br>
+		<label for="kjonn">Kjonn</label>
+		<input id="kjonn" name="kjonn" type="text" value=""/><br>
+	</form>
+</body>
+</html>
