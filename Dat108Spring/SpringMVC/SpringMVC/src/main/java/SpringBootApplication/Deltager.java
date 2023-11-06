@@ -4,8 +4,11 @@ public class Deltager {
 
 	
 	private String fornavn;
+	
 	private String etternavn;
+	
 	private int mobil;
+	
 	private String passord;
 	private Kjonn kjonn;
 	
